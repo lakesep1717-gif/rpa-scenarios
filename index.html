@@ -3,98 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RPA 应用场景库 | 跨境电商自动化场景</title>
-<meta name="description" content="收录跨境电商RPA自动化场景，覆盖亚马逊、速卖通、Lazada等平台，支持精品/精铺/铺货三种运营模式筛选。">
+<title>RPA 应用场景库 - 跨境电商自动化</title>
+<meta name="description" content="收录跨境电商RPA自动化场景，覆盖亚马逊、速卖通、Lazada等平台">
 <meta property="og:title" content="RPA 应用场景库">
-<meta property="og:description" content="收录跨境电商RPA自动化场景，覆盖亚马逊、速卖通、Lazada等平台。">
+<meta property="og:description" content="收录跨境电商RPA自动化场景">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:#f5f7fa;color:#333}
-.container{display:flex;height:100vh}
-.sidebar{width:200px;background:#2c3e50;color:#fff;padding:20px 0;flex-shrink:0;overflow-y:auto}
-.sidebar h2{padding:0 20px 20px;font-size:16px;border-bottom:1px solid #34495e;margin-bottom:10px}
-.sidebar h3{padding:15px 20px 10px;font-size:13px;color:#95a5a6}
-.category-item{padding:10px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:14px}
-.category-item:hover{background:#34495e}
-.category-item.active{background:#3498db}
-.category-count{background:#3498db;padding:2px 8px;border-radius:10px;font-size:11px}
-.category-item.active .category-count{background:#fff;color:#3498db}
-.main{flex:1;display:flex;flex-direction:column;overflow:hidden}
-.toolbar{padding:15px 20px;background:#fff;border-bottom:1px solid #e1e4e8;display:flex;gap:15px;align-items:center;flex-wrap:wrap}
-.search-box{flex:1;min-width:200px;max-width:400px;position:relative}
-.search-box input{width:100%;padding:8px 12px 8px 35px;border:1px solid #d1d5da;border-radius:6px;font-size:13px;outline:none}
-.search-box::before{content:"搜";position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:12px;color:#999}
-.stats{color:#666;font-size:13px}
-.export-btn{padding:8px 16px;background:#27ae60;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px}
-.table-container{flex:1;overflow-x:auto;overflow-y:auto;padding:15px}
-table{width:100%;min-width:1400px;border-collapse:collapse;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-thead{position:sticky;top:0;z-index:10;background:#f8f9fa}
-th{padding:12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #e1e4e8;font-size:13px}
-td{padding:14px 12px;border-bottom:1px solid #e1e4e8;vertical-align:top;font-size:13px;line-height:1.6}
-tr:hover{background:#f8f9fa;cursor:pointer}
-.app-name{font-weight:500;color:#2c3e50}
-.category-tag{display:inline-block;padding:3px 8px;border-radius:3px;font-size:11px;margin-right:4px}
-.tag-amazon{background:#ff9800;color:#fff}
-.tag-other{background:#607d8b;color:#fff}
-.mode-tag{display:inline-block;padding:3px 8px;border-radius:3px;font-size:11px}
-.mode-jingpin{background:#e74c3c;color:#fff}
-.mode-jingpu{background:#9b59b6;color:#fff}
-.mode-puhuo{background:#3498db;color:#fff}
-.mode-tongyong{background:#95a5a6;color:#fff}
-.col-intro{min-width:300px;white-space:normal;word-break:break-word}
-.col-steps{min-width:450px;white-space:pre-wrap;word-break:break-word}
-.pagination{padding:15px;background:#fff;border-top:1px solid #e1e4e8;display:flex;justify-content:center;align-items:center;gap:8px}
-.page-btn{padding:6px 12px;border:1px solid #d1d5da;background:#fff;cursor:pointer;border-radius:4px;font-size:12px}
-.page-btn:hover:not(:disabled){background:#f3f4f6}
-.page-btn:disabled{opacity:0.5;cursor:not-allowed}
-.page-btn.active{background:#3498db;color:#fff;border-color:#3498db}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;justify-content:center;align-items:center;padding:20px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;color:#333}
+.header{background:rgba(255,255,255,0.95);padding:20px 30px;box-shadow:0 2px 20px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100}
+.header-content{max-width:1600px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{font-size:32px}
+.logo-text h1{font-size:22px;color:#2c3e50;font-weight:700}
+.logo-text p{font-size:12px;color:#7f8c8d;margin-top:2px}
+.search-box{flex:1;max-width:500px;position:relative}
+.search-box input{width:100%;padding:12px 20px 12px 45px;border:2px solid #e1e4e8;border-radius:25px;font-size:14px;outline:none;transition:all 0.3s;background:#f8f9fa}
+.search-box input:focus{border-color:#667eea;background:#fff;box-shadow:0 0 0 4px rgba(102,126,234,0.1)}
+.search-box::before{content:"🔍";position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:16px}
+.stats-bar{display:flex;gap:15px;align-items:center}
+.stat-item{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:500}
+.filter-tags{display:flex;gap:8px;flex-wrap:wrap}
+.filter-tag{padding:8px 16px;border-radius:20px;font-size:13px;cursor:pointer;transition:all 0.2s;background:#f0f0f0;color:#666;border:none}
+.filter-tag:hover{background:#e0e0e0}
+.filter-tag.active{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff}
+.main-container{max-width:1600px;margin:0 auto;padding:20px}
+.content-area{display:flex;gap:20px}
+.card-grid{flex:1;display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:all 0.3s;cursor:pointer}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.12)}
+.card-header{padding:16px 20px;border-bottom:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:start;gap:10px}
+.card-title{font-size:16px;font-weight:600;color:#2c3e50;line-height:1.4}
+.card-tags{display:flex;gap:6px;flex-shrink:0}
+.tag{padding:4px 10px;border-radius:12px;font-size:11px;font-weight:500}
+.tag-amazon{background:#fff3e0;color:#e65100}
+.tag-other{background:#f3e5f5;color:#7b1fa2}
+.tag-jingpin{background:#ffebee;color:#c62828}
+.tag-jingpu{background:#f3e5f5;color:#7b1fa2}
+.tag-puhuo{background:#e3f2fd;color:#1565c0}
+.tag-tongyong{background:#f5f5f5;color:#616161}
+.card-body{padding:16px 20px}
+.card-intro{font-size:13px;color:#666;line-height:1.6;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-steps{font-size:12px;color:#888;line-height:1.7;background:#f9f9f9;padding:12px;border-radius:8px;white-space:pre-wrap;word-break:break-word;max-height:120px;overflow:hidden;position:relative}
+.card-steps::after{content:"";position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(transparent,#f9f9f9)}
+.card-footer{padding:12px 20px;background:#fafafa;display:flex;justify-content:space-between;align-items:center}
+.view-detail{color:#667eea;font-size:13px;font-weight:500}
+.pagination{display:flex;justify-content:center;gap:8px;padding:30px}
+.page-btn{padding:10px 18px;border:2px solid #e1e4e8;background:#fff;border-radius:10px;font-size:14px;cursor:pointer;transition:all 0.2s;color:#666}
+.page-btn:hover:not(:disabled){border-color:#667eea;color:#667eea}
+.page-btn:disabled{opacity:0.4;cursor:not-allowed}
+.page-btn.active{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-color:transparent}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:1000;justify-content:center;align-items:center;padding:20px;backdrop-filter:blur(4px)}
 .modal.show{display:flex}
-.modal-content{background:#fff;border-radius:12px;max-width:1100px;width:100%;max-height:90vh;overflow-y:auto;padding:30px}
-.modal-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px}
-.modal-title{font-size:18px;font-weight:600;color:#2c3e50;word-break:break-word;padding-right:30px;flex:1}
-.modal-close{background:none;border:none;font-size:24px;cursor:pointer;color:#999;flex-shrink:0}
-.modal-tags{margin-bottom:15px}
-.modal-section{margin-bottom:20px}
-.modal-section h3{color:#3498db;font-size:14px;margin-bottom:8px;font-weight:600}
-.modal-section p{color:#555;line-height:1.8;font-size:14px;white-space:pre-wrap;word-break:break-word}
-@media(max-width:768px){.sidebar{display:none}.modal-content{padding:20px}}
+.modal-content{background:#fff;border-radius:20px;max-width:900px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.modal-header{padding:24px 30px;border-bottom:1px solid #f0f0f0;display:flex;justify-content:space-between;align-items:start}
+.modal-title{font-size:20px;font-weight:700;color:#2c3e50;line-height:1.4;flex:1;padding-right:20px}
+.modal-close{width:36px;height:36px;border-radius:50%;border:none;background:#f5f5f5;font-size:20px;cursor:pointer;color:#999;transition:all 0.2s;flex-shrink:0}
+.modal-close:hover{background:#e0e0e0;color:#666}
+.modal-tags{padding:0 30px 16px;display:flex;gap:8px}
+.modal-body{padding:24px 30px;overflow-y:auto;flex:1}
+.modal-section{margin-bottom:24px}
+.modal-section h3{font-size:14px;color:#667eea;margin-bottom:12px;font-weight:600;display:flex;align-items:center;gap:8px}
+.modal-section h3::before{content:"";width:4px;height:16px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:2px}
+.modal-section p{font-size:14px;color:#555;line-height:1.9;white-space:pre-wrap;word-break:break-word;background:#f9f9f9;padding:16px;border-radius:12px}
+.no-data{text-align:center;padding:60px;color:#999;font-size:16px}
+@media(max-width:768px){
+.header-content{flex-direction:column;text-align:center}
+.search-box{max-width:100%}
+.card-grid{grid-template-columns:1fr}
+.modal-content{max-height:90vh;border-radius:16px}
+.modal-header,.modal-body,.modal-tags{padding:16px 20px}
+}
 </style>
 </head>
 <body>
-<div class="container">
-<div class="sidebar">
-<h2>板块分类</h2>
-<div id="categoryList"></div>
-<h3>适配模式</h3>
-<div id="modeList"></div>
+<div class="header">
+<div class="header-content">
+<div class="logo">
+<div class="logo-icon">🤖</div>
+<div class="logo-text"><h1>RPA 应用场景库</h1><p>跨境电商自动化场景一站式查询</p></div>
 </div>
-<div class="main">
-<div class="toolbar">
-<div class="search-box"><input type="text" id="searchInput" placeholder="搜索应用名称、简介..."></div>
-<div class="stats" id="stats"></div>
-<button class="export-btn" onclick="exportCSV()">导出CSV</button>
+<div class="search-box"><input type="text" id="searchInput" placeholder="搜索应用名称或关键词..."></div>
+<div class="stats-bar">
+<div class="stat-item" id="totalCount">共 0 条</div>
+<div class="stat-item" id="currentCount">当前 0 条</div>
 </div>
-<div class="table-container">
-<table>
-<thead><tr>
-<th style="min-width:70px">板块</th>
-<th style="min-width:60px">模式</th>
-<th style="min-width:150px">应用名称</th>
-<th class="col-intro">简介</th>
-<th class="col-steps">RPA流程</th>
-</tr></thead>
-<tbody id="tableBody"></tbody>
-</table>
 </div>
+<div class="header-content" style="padding-top:15px;border-top:1px solid #f0f0f0;margin-top:15px">
+<div class="filter-tags" id="categoryFilter"></div>
+<div class="filter-tags" id="modeFilter"></div>
+</div>
+</div>
+<div class="main-container">
+<div class="card-grid" id="cardGrid"></div>
 <div class="pagination" id="pagination"></div>
-</div>
 </div>
 <div class="modal" id="detailModal">
 <div class="modal-content">
 <div class="modal-header">
 <div class="modal-title" id="modalTitle"></div>
-<button class="modal-close" onclick="closeModal()">X</button>
+<button class="modal-close" onclick="closeModal()">×</button>
 </div>
 <div class="modal-tags" id="modalTags"></div>
 <div class="modal-body" id="modalBody"></div>
@@ -107,112 +114,105 @@ var filteredData = allData.slice();
 var currentCategory = '全部';
 var currentMode = '全部';
 var currentPage = 1;
-var pageSize = 20;
+var pageSize = 12;
 
-function init(){renderCategories();renderModes();renderTable()}
+function init(){renderFilters();renderCards();updateStats()}
 
-function renderCategories(){
-  var container = document.getElementById('categoryList');
-  var html = '<div class="category-item active" onclick="selectCategory(\'全部\',this)"><span>全部</span><span class="category-count">'+allData.length+'</span></div>';
-  var counts = DATA.counts;
-  for(var i=0;i<DATA.categories.length;i++){
-    var cat = DATA.categories[i];
-    var cnt = counts[cat]||0;
-    if(cnt>0) html += '<div class="category-item" onclick="selectCategory(\''+cat+'\',this)"><span>'+cat+'</span><span class="category-count">'+cnt+'</span></div>';
-  }
-  container.innerHTML = html;
+function renderFilters(){
+  var catContainer = document.getElementById('categoryFilter');
+  var modeContainer = document.getElementById('modeFilter');
+  
+  var catHtml = '<button class="filter-tag active" onclick="filterCategory(\'全部\',this)">全部</button>';
+  var modeHtml = '<button class="filter-tag active" onclick="filterMode(\'全部\',this)">全部模式</button>';
+  
+  DATA.categories.forEach(function(cat){catHtml += '<button class="filter-tag" onclick="filterCategory(\''+cat+'\',this)">'+cat+'</button>';});
+  ['精品','精铺','铺货','通用'].forEach(function(m){modeHtml += '<button class="filter-tag" onclick="filterMode(\''+m+'\',this)">'+m+'</button>';});
+  
+  catContainer.innerHTML = catHtml;
+  modeContainer.innerHTML = modeHtml;
 }
 
-function renderModes(){
-  var container = document.getElementById('modeList');
-  var html = '<div class="category-item active" onclick="selectMode(\'全部\',this)"><span>全部</span><span class="category-count">'+allData.length+'</span></div>';
-  var counts = DATA.modeCounts;
-  var modes = ['精品','精铺','铺货','通用'];
-  for(var i=0;i<modes.length;i++){
-    var m = modes[i];
-    var cnt = counts[m]||0;
-    if(cnt>0) html += '<div class="category-item" onclick="selectMode(\''+m+'\',this)"><span>'+m+'</span><span class="category-count">'+cnt+'</span></div>';
-  }
-  container.innerHTML = html;
-}
+function filterCategory(cat,el){currentCategory = cat;currentPage = 1;updateFilterUI('categoryFilter',el);applyFilters()}
+function filterMode(mode,el){currentMode = mode;currentPage = 1;updateFilterUI('modeFilter',el);applyFilters()}
+function updateFilterUI(containerId,activeEl){var btns = document.querySelectorAll('#'+containerId+' .filter-tag');btns.forEach(function(b){b.classList.remove('active');});activeEl.classList.add('active')}
 
-function selectCategory(cat,el){
-  currentCategory = cat;
-  currentPage = 1;
-  var items = document.querySelectorAll('#categoryList .category-item');
-  for(var i=0;i<items.length;i++) items[i].classList.remove('active');
-  el.classList.add('active');
-  filterData();
-}
+document.getElementById('searchInput').addEventListener('input',function(e){currentPage = 1;applyFilters()});
 
-function selectMode(mode,el){
-  currentMode = mode;
-  currentPage = 1;
-  var items = document.querySelectorAll('#modeList .category-item');
-  for(var i=0;i<items.length;i++) items[i].classList.remove('active');
-  el.classList.add('active');
-  filterData();
-}
-
-document.getElementById('searchInput').addEventListener('input',function(e){currentPage=1;filterData()});
-
-function filterData(){
+function applyFilters(){
   var term = document.getElementById('searchInput').value.toLowerCase();
-  filteredData = [];
-  for(var i=0;i<allData.length;i++){
-    var item = allData[i];
+  filteredData = allData.filter(function(item){
     var matchCat = currentCategory==='全部' || item['板块']===currentCategory;
     var matchMode = currentMode==='全部' || item['适配模式']===currentMode;
     var matchSearch = !term || (item['应用名称']||'').toLowerCase().indexOf(term)>=0 || (item['简介']||'').toLowerCase().indexOf(term)>=0;
-    if(matchCat && matchMode && matchSearch) filteredData.push(item);
-  }
-  renderTable();
+    return matchCat && matchMode && matchSearch;
+  });
+  renderCards();
+  updateStats();
 }
 
-function renderTable(){
-  var tbody = document.getElementById('tableBody');
-  var start = (currentPage-1)*pageSize;
-  var pageData = filteredData.slice(start, start+pageSize);
-  var html = '';
-  if(pageData.length===0) html = '<tr><td colspan="5" style="text-align:center;padding:40px;color:#999">暂无数据</td></tr>';
-  else{
-    for(var i=0;i<pageData.length;i++){
-      var item = pageData[i];
-      var idx = start + i;
-      html += '<tr onclick="showDetail('+idx+')">';
-      html += '<td><span class="category-tag '+getCatClass(item['板块'])+'">'+item['板块']+'</span></td>';
-      html += '<td><span class="mode-tag '+getModeClass(item['适配模式'])+'">'+item['适配模式']+'</span></td>';
-      html += '<td><div class="app-name">'+esc(item['应用名称']||'')+'</div></td>';
-      html += '<td class="col-intro">'+esc(item['简介']||'')+'</td>';
-      html += '<td class="col-steps">'+esc(item['RPA流程']||'')+'</td>';
-      html += '</tr>';
-    }
+function updateStats(){
+  document.getElementById('totalCount').textContent = '共 ' + allData.length + ' 条';
+  document.getElementById('currentCount').textContent = '当前 ' + filteredData.length + ' 条';
+}
+
+function renderCards(){
+  var container = document.getElementById('cardGrid');
+  var start = (currentPage - 1) * pageSize;
+  var pageData = filteredData.slice(start, start + pageSize);
+  
+  if(pageData.length === 0){
+    container.innerHTML = '<div class="no-data">暂无匹配数据</div>';
+    document.getElementById('pagination').innerHTML = '';
+    return;
   }
-  tbody.innerHTML = html;
-  document.getElementById('stats').textContent = '共 '+filteredData.length+' 条';
+  
+  var html = '';
+  pageData.forEach(function(item, i){
+    var idx = start + i;
+    html += '<div class="card" onclick="showDetail('+idx+')">';
+    html += '<div class="card-header">';
+    html += '<div class="card-title">'+esc(item['应用名称']||'')+'</div>';
+    html += '<div class="card-tags">';
+    html += '<span class="tag '+getTagClass('板块',item['板块'])+'">'+item['板块']+'</span>';
+    html += '<span class="tag '+getTagClass('模式',item['适配模式'])+'">'+item['适配模式']+'</span>';
+    html += '</div></div>';
+    html += '<div class="card-body">';
+    html += '<div class="card-intro">'+esc(item['简介']||'暂无简介')+'</div>';
+    html += '<div class="card-steps">'+esc(item['RPA流程']||'暂无流程')+'</div>';
+    html += '</div>';
+    html += '<div class="card-footer"><span class="view-detail">点击查看详情 →</span></div>';
+    html += '</div>';
+  });
+  container.innerHTML = html;
   renderPagination();
 }
 
 function renderPagination(){
-  var totalPages = Math.ceil(filteredData.length/pageSize);
+  var totalPages = Math.ceil(filteredData.length / pageSize);
   var container = document.getElementById('pagination');
-  if(totalPages<=1){container.innerHTML='';return}
+  if(totalPages <= 1){container.innerHTML = '';return;}
+  
   var html = '<button class="page-btn" onclick="goToPage(1)"'+(currentPage===1?' disabled':'')+'>首页</button>';
   html += '<button class="page-btn" onclick="goToPage('+(currentPage-1)+')"'+(currentPage===1?' disabled':'')+'>上页</button>';
-  var maxBtn=5, startPage=Math.max(1,currentPage-2), endPage=Math.min(totalPages,startPage+maxBtn-1);
-  if(endPage-startPage<maxBtn-1) startPage=Math.max(1,endPage-maxBtn+1);
-  for(var i=startPage;i<=endPage;i++) html += '<button class="page-btn'+(i===currentPage?' active':'')+'" onclick="goToPage('+i+')">'+i+'</button>';
+  
+  var startPage = Math.max(1, currentPage - 2);
+  var endPage = Math.min(totalPages, startPage + 4);
+  if(endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
+  
+  for(var i = startPage; i <= endPage; i++){
+    html += '<button class="page-btn'+(i===currentPage?' active':'')+'" onclick="goToPage('+i+')">'+i+'</button>';
+  }
   html += '<button class="page-btn" onclick="goToPage('+(currentPage+1)+')"'+(currentPage===totalPages?' disabled':'')+'>下页</button>';
   html += '<button class="page-btn" onclick="goToPage('+totalPages+')"'+(currentPage===totalPages?' disabled':'')+'>末页</button>';
   container.innerHTML = html;
 }
 
-function goToPage(p){currentPage=p;renderTable();document.querySelector('.table-container').scrollTop=0}
+function goToPage(p){currentPage = p;renderCards();window.scrollTo({top:0,behavior:'smooth'})}
 
 function showDetail(idx){
   var item = filteredData[idx];
   document.getElementById('modalTitle').textContent = item['应用名称']||'未命名';
-  document.getElementById('modalTags').innerHTML = '<span class="category-tag '+getCatClass(item['板块'])+'">'+item['板块']+'</span> <span class="mode-tag '+getModeClass(item['适配模式'])+'">'+item['适配模式']+'</span>';
+  document.getElementById('modalTags').innerHTML = '<span class="tag '+getTagClass('板块',item['板块'])+'">'+item['板块']+'</span> <span class="tag '+getTagClass('模式',item['适配模式'])+'">'+item['适配模式']+'</span>';
   document.getElementById('modalBody').innerHTML = '<div class="modal-section"><h3>简介</h3><p>'+(item['简介']||'暂无')+'</p></div><div class="modal-section"><h3>RPA流程</h3><p>'+(item['RPA流程']||'暂无')+'</p></div>';
   document.getElementById('detailModal').classList.add('show');
 }
@@ -220,27 +220,11 @@ function showDetail(idx){
 function closeModal(){document.getElementById('detailModal').classList.remove('show')}
 document.getElementById('detailModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
 
-function exportCSV(){
-  var headers = ['板块','适配模式','应用名称','简介','RPA流程'];
-  var csv = '\uFEFF'+headers.join(',')+'\n';
-  for(var i=0;i<filteredData.length;i++){
-    var item = filteredData[i];
-    var row = [];
-    for(var j=0;j<headers.length;j++) row.push('"'+(item[headers[j]]||'').replace(/"/g,'""').replace(/\n/g,' ')+'"');
-    csv += row.join(',')+'\n';
-  }
-  var blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  var a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'RPA应用场景_'+new Date().toISOString().slice(0,10)+'.csv';
-  a.click();
-}
-
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-function getCatClass(cat){return cat==='亚马逊'?'tag-amazon':'tag-other'}
-function getModeClass(mode){
-  var m={'精品':'mode-jingpin','精铺':'mode-jingpu','铺货':'mode-puhuo','通用':'mode-tongyong'};
-  return m[mode]||'mode-tongyong';
+function getTagClass(type,val){
+  if(type==='板块') return val==='亚马逊'?'tag-amazon':'tag-other';
+  var m={'精品':'tag-jingpin','精铺':'tag-jingpu','铺货':'tag-puhuo','通用':'tag-tongyong'};
+  return m[val]||'tag-tongyong';
 }
 
 init();
