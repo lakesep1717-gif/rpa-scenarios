@@ -46,10 +46,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 .export-btn{padding:8px 16px;background:#27ae60;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px}
 .export-btn:hover{background:#219a52}
 .table-container{flex:1;overflow:auto;padding:15px}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);table-layout:auto}
 thead{position:sticky;top:0;z-index:10}
 th{background:#f8f9fa;padding:12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #e1e4e8;white-space:nowrap;font-size:13px}
-td{padding:12px;border-bottom:1px solid #e1e4e8;vertical-align:top;font-size:13px;word-break:break-word}
+td{padding:14px 12px;border-bottom:1px solid #e1e4e8;vertical-align:top;font-size:13px;word-break:break-word;line-height:1.6}
 tr:hover{background:#f8f9fa;cursor:pointer}
 .app-name{font-weight:500;color:#2c3e50}
 .category-tag{display:inline-block;padding:3px 8px;border-radius:3px;font-size:11px;margin-right:4px}
@@ -71,14 +71,14 @@ tr:hover{background:#f8f9fa;cursor:pointer}
 .modal.show{display:flex}
 .modal-content{background:#fff;border-radius:12px;max-width:900px;max-height:85vh;overflow-y:auto;padding:30px;width:90%}
 .modal-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px}
-.modal-title{font-size:18px;font-weight:600;color:#2c3e50}
+.modal-title{font-size:18px;font-weight:600;color:#2c3e50;word-break:break-word;padding-right:30px}
 .modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:#999}
 .modal-tags{margin-bottom:15px}
 .modal-section{margin-bottom:15px}
 .modal-section h3{color:#3498db;font-size:13px;margin-bottom:6px}
 .modal-section p{color:#555;line-height:1.8;font-size:13px;white-space:pre-line;word-break:break-word;margin:0}
 .footer{padding:10px 20px;background:#2c3e50;color:#fff;text-align:center;font-size:12px}
-@media(max-width:768px){.sidebar{display:none}.intro-text,.steps-text{max-width:120px}}
+@media(max-width:768px){.sidebar{display:none}.table-container{overflow-x:auto}.modal-content{width:95%;padding:20px}}
 </style>
 </head>
 <body>
@@ -98,11 +98,11 @@ tr:hover{background:#f8f9fa;cursor:pointer}
 <div class="table-container">
 <table>
 <thead><tr>
-<th style="width:90px">板块</th>
-<th style="width:90px">模式</th>
-<th style="width:200px">应用名称</th>
-<th>简介</th>
-<th>RPA流程</th>
+<th style="width:80px">板块</th>
+<th style="width:70px">模式</th>
+<th style="width:180px">应用名称</th>
+<th style="min-width:200px">简介</th>
+<th style="min-width:250px">RPA流程</th>
 </tr></thead>
 <tbody id="tableBody"></tbody>
 </table>
